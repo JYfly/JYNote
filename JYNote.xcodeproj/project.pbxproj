@@ -17,6 +17,11 @@
 		A764ED7F1E5C18AA00C244C2 /* JYNoteNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED7D1E5C18AA00C244C2 /* JYNoteNavigationController.m */; };
 		A764ED831E5C195700C244C2 /* JYNoteConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED821E5C195700C244C2 /* JYNoteConst.m */; };
 		A764ED8A1E5C1A6500C244C2 /* JYNoteNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */; };
+		A764ED981E5C259400C244C2 /* JYNoteLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED971E5C259400C244C2 /* JYNoteLoginViewController.m */; };
+		A764ED9B1E5C25C600C244C2 /* JYNoteLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED9A1E5C25C600C244C2 /* JYNoteLoginInfo.m */; };
+		A764ED9E1E5C260400C244C2 /* JYNoteLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED9D1E5C260400C244C2 /* JYNoteLoginButton.m */; };
+		A764EDA11E5C263300C244C2 /* JYNoteLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDA01E5C263300C244C2 /* JYNoteLoginTextField.m */; };
+		A764EDA81E5C2B0300C244C2 /* JYNoteHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDA71E5C2B0300C244C2 /* JYNoteHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,16 @@
 		A764ED821E5C195700C244C2 /* JYNoteConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteConst.m; sourceTree = "<group>"; };
 		A764ED881E5C1A6500C244C2 /* JYNoteNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteNetworkTool.h; sourceTree = "<group>"; };
 		A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteNetworkTool.m; sourceTree = "<group>"; };
+		A764ED961E5C259400C244C2 /* JYNoteLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteLoginViewController.h; sourceTree = "<group>"; };
+		A764ED971E5C259400C244C2 /* JYNoteLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteLoginViewController.m; sourceTree = "<group>"; };
+		A764ED991E5C25C600C244C2 /* JYNoteLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteLoginInfo.h; sourceTree = "<group>"; };
+		A764ED9A1E5C25C600C244C2 /* JYNoteLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteLoginInfo.m; sourceTree = "<group>"; };
+		A764ED9C1E5C260400C244C2 /* JYNoteLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteLoginButton.h; sourceTree = "<group>"; };
+		A764ED9D1E5C260400C244C2 /* JYNoteLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteLoginButton.m; sourceTree = "<group>"; };
+		A764ED9F1E5C263300C244C2 /* JYNoteLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteLoginTextField.h; sourceTree = "<group>"; };
+		A764EDA01E5C263300C244C2 /* JYNoteLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteLoginTextField.m; sourceTree = "<group>"; };
+		A764EDA61E5C2B0300C244C2 /* JYNoteHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteHomeViewController.h; sourceTree = "<group>"; };
+		A764EDA71E5C2B0300C244C2 /* JYNoteHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteHomeViewController.m; sourceTree = "<group>"; };
 		F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +182,7 @@
 		A764ED621E5BDCD400C244C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A764ED911E5C241300C244C2 /* Sections */,
 				A764ED841E5C196C00C244C2 /* Tools */,
 				A764ED801E5C18E900C244C2 /* Macro */,
 				A764ED651E5BDDEE00C244C2 /* Other */,
@@ -219,6 +235,87 @@
 				A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		A764ED911E5C241300C244C2 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				A764EDA21E5C2AED00C244C2 /* Home */,
+				A764ED921E5C250500C244C2 /* Account */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		A764ED921E5C250500C244C2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED931E5C255E00C244C2 /* View */,
+				A764ED941E5C255E00C244C2 /* Model */,
+				A764ED951E5C255E00C244C2 /* ViewController */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		A764ED931E5C255E00C244C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED9C1E5C260400C244C2 /* JYNoteLoginButton.h */,
+				A764ED9D1E5C260400C244C2 /* JYNoteLoginButton.m */,
+				A764ED9F1E5C263300C244C2 /* JYNoteLoginTextField.h */,
+				A764EDA01E5C263300C244C2 /* JYNoteLoginTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A764ED941E5C255E00C244C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED991E5C25C600C244C2 /* JYNoteLoginInfo.h */,
+				A764ED9A1E5C25C600C244C2 /* JYNoteLoginInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A764ED951E5C255E00C244C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED961E5C259400C244C2 /* JYNoteLoginViewController.h */,
+				A764ED971E5C259400C244C2 /* JYNoteLoginViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A764EDA21E5C2AED00C244C2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A764EDA31E5C2AED00C244C2 /* Model */,
+				A764EDA41E5C2AED00C244C2 /* View */,
+				A764EDA51E5C2AED00C244C2 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A764EDA31E5C2AED00C244C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A764EDA41E5C2AED00C244C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A764EDA51E5C2AED00C244C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A764EDA61E5C2B0300C244C2 /* JYNoteHomeViewController.h */,
+				A764EDA71E5C2B0300C244C2 /* JYNoteHomeViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		D95461CC4DE21E882D1C47EA /* Frameworks */ = {
@@ -412,9 +509,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A764ED831E5C195700C244C2 /* JYNoteConst.m in Sources */,
+				A764EDA81E5C2B0300C244C2 /* JYNoteHomeViewController.m in Sources */,
+				A764ED981E5C259400C244C2 /* JYNoteLoginViewController.m in Sources */,
+				A764ED9B1E5C25C600C244C2 /* JYNoteLoginInfo.m in Sources */,
 				A764ED7F1E5C18AA00C244C2 /* JYNoteNavigationController.m in Sources */,
+				A764EDA11E5C263300C244C2 /* JYNoteLoginTextField.m in Sources */,
 				A764ED7E1E5C18AA00C244C2 /* JYNoteBaseViewController.m in Sources */,
 				A764ED8A1E5C1A6500C244C2 /* JYNoteNetworkTool.m in Sources */,
+				A764ED9E1E5C260400C244C2 /* JYNoteLoginButton.m in Sources */,
 				A764ED6F1E5BDEB800C244C2 /* JYNoteAppDelegate.m in Sources */,
 				A764ED2B1E5BD50E00C244C2 /* main.m in Sources */,
 			);

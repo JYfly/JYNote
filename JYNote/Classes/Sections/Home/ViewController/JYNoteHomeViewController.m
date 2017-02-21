@@ -1,35 +1,31 @@
 //
-//  JYNoteBaseViewController.m
+//  JYNoteHomeViewController.m
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
 //  Copyright © 2017年 chen_sy. All rights reserved.
 //
 
-#import "JYNoteBaseViewController.h"
+#import "JYNoteHomeViewController.h"
+#import "JYNoteLoginViewController.h"
 
-@interface JYNoteBaseViewController ()
+@interface JYNoteHomeViewController ()
 
 @end
 
-@implementation JYNoteBaseViewController
+@implementation JYNoteHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.title = @"我的笔记";
+    JYNoteLoginViewController *loginVC = [[JYNoteLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)setNavigationBarTintColor:(UIColor *)color {
-    [self.navigationController.navigationBar setTintColor:color];
-}
-
-- (void)setNavigationBarHidden:(BOOL)hidden {
-    [self.navigationController.navigationBar setHidden:hidden];
 }
 
 /*
