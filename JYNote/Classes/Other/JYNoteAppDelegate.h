@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  JYNoteAppDelegate.h
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface JYNoteAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 
 @end
-

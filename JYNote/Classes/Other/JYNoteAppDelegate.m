@@ -1,18 +1,17 @@
 //
-//  AppDelegate.m
+//  JYNoteAppDelegate.m
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
 //  Copyright © 2017年 chen_sy. All rights reserved.
 //
+#import "JYNoteAppDelegate.h"
 
-#import "AppDelegate.h"
-
-@interface AppDelegate ()
+@interface JYNoteAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation JYNoteAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -49,3 +48,4 @@
 
 
 @end
+
