@@ -10,4 +10,6 @@
 
 @interface JYNoteNavigationController : UINavigationController
 
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController setNavigationBarHidden:(BOOL)hidden;
+
 @end

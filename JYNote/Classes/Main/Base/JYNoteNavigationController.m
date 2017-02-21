@@ -16,8 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.navigationBar.barTintColor = [UIColor yellowColor];
+}
+
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController setNavigationBarHidden:(BOOL)hidden {
+    
+    if (self = [super initWithRootViewController:rootViewController]) {
+        [self setNavigationBarHidden:hidden animated:NO];
+    }
+    return self;
 }
 
 - (void)didReceiveMemoryWarning {

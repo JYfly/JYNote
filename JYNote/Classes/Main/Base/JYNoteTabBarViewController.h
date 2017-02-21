@@ -1,5 +1,5 @@
 //
-//  JYNoteBaseViewController.h
+//  JYNoteTabBarViewController.h
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JYNoteBaseViewController : UIViewController
+@interface JYNoteTabBarViewController : UITabBarController
 
 @end

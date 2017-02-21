@@ -7,7 +7,6 @@
 //
 
 #import "JYNoteHomeViewController.h"
-#import "JYNoteLoginViewController.h"
 
 @interface JYNoteHomeViewController ()
 
@@ -17,10 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"我的笔记";
-    JYNoteLoginViewController *loginVC = [[JYNoteLoginViewController alloc] init];
-    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

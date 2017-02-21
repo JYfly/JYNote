@@ -1,5 +1,5 @@
 //
-//  JYNoteBaseViewController.h
+//  JYNoteAccountViewController.h
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JYNoteBaseViewController.h"
 
-@interface JYNoteBaseViewController : UIViewController
+@interface JYNoteAccountViewController : JYNoteBaseViewController
 
 @end

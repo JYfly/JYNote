@@ -7,6 +7,7 @@
 //
 #import "JYNoteAppDelegate.h"
 #import "JYNoteNavigationController.h"
+#import "JYNoteTabBarViewController.h"
 #import "JYNoteHomeViewController.h"
 
 @interface JYNoteAppDelegate ()
@@ -19,8 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    JYNoteHomeViewController * baseVC = [[JYNoteHomeViewController alloc] init];
+    JYNoteTabBarViewController * baseVC = [[JYNoteTabBarViewController alloc] init];
     self.window.rootViewController = [[JYNoteNavigationController alloc] initWithRootViewController:baseVC];
+    
+    self.window.rootViewController = [[JYNoteNavigationController alloc] initWithRootViewController:baseVC setNavigationBarHidden:NO];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

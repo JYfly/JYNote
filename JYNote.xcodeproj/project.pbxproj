@@ -22,6 +22,9 @@
 		A764ED9E1E5C260400C244C2 /* JYNoteLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED9D1E5C260400C244C2 /* JYNoteLoginButton.m */; };
 		A764EDA11E5C263300C244C2 /* JYNoteLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDA01E5C263300C244C2 /* JYNoteLoginTextField.m */; };
 		A764EDA81E5C2B0300C244C2 /* JYNoteHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDA71E5C2B0300C244C2 /* JYNoteHomeViewController.m */; };
+		A764EDB51E5C3AA000C244C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A764EDB41E5C3AA000C244C2 /* AVFoundation.framework */; };
+		A764EDB81E5C3FF300C244C2 /* JYNoteTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDB71E5C3FF300C244C2 /* JYNoteTabBarViewController.m */; };
+		A764EDBB1E5C405400C244C2 /* JYNoteAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764EDBA1E5C405400C244C2 /* JYNoteAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,11 @@
 		A764EDA01E5C263300C244C2 /* JYNoteLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteLoginTextField.m; sourceTree = "<group>"; };
 		A764EDA61E5C2B0300C244C2 /* JYNoteHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteHomeViewController.h; sourceTree = "<group>"; };
 		A764EDA71E5C2B0300C244C2 /* JYNoteHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteHomeViewController.m; sourceTree = "<group>"; };
+		A764EDB41E5C3AA000C244C2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A764EDB61E5C3FF300C244C2 /* JYNoteTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteTabBarViewController.h; sourceTree = "<group>"; };
+		A764EDB71E5C3FF300C244C2 /* JYNoteTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteTabBarViewController.m; sourceTree = "<group>"; };
+		A764EDB91E5C405400C244C2 /* JYNoteAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteAccountViewController.h; sourceTree = "<group>"; };
+		A764EDBA1E5C405400C244C2 /* JYNoteAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteAccountViewController.m; sourceTree = "<group>"; };
 		F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A764EDB51E5C3AA000C244C2 /* AVFoundation.framework in Frameworks */,
 				6775D9312ABF89A444997CF9 /* libPods-JYNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,9 +127,9 @@
 				A764ED281E5BD50E00C244C2 /* JYNote */,
 				A764ED421E5BD50E00C244C2 /* JYNoteTests */,
 				A764ED4D1E5BD50E00C244C2 /* JYNoteUITests */,
+				D95461CC4DE21E882D1C47EA /* Frameworks */,
 				A764ED271E5BD50E00C244C2 /* Products */,
 				0FB07AE8ABD1789F6614E11D /* Pods */,
-				D95461CC4DE21E882D1C47EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +224,8 @@
 				A764ED7B1E5C18AA00C244C2 /* JYNoteBaseViewController.m */,
 				A764ED7C1E5C18AA00C244C2 /* JYNoteNavigationController.h */,
 				A764ED7D1E5C18AA00C244C2 /* JYNoteNavigationController.m */,
+				A764EDB61E5C3FF300C244C2 /* JYNoteTabBarViewController.h */,
+				A764EDB71E5C3FF300C244C2 /* JYNoteTabBarViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -281,6 +292,8 @@
 			children = (
 				A764ED961E5C259400C244C2 /* JYNoteLoginViewController.h */,
 				A764ED971E5C259400C244C2 /* JYNoteLoginViewController.m */,
+				A764EDB91E5C405400C244C2 /* JYNoteAccountViewController.h */,
+				A764EDBA1E5C405400C244C2 /* JYNoteAccountViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -321,6 +334,7 @@
 		D95461CC4DE21E882D1C47EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A764EDB41E5C3AA000C244C2 /* AVFoundation.framework */,
 				435C2173936613F23AE10526 /* libPods-JYNote.a */,
 			);
 			name = Frameworks;
@@ -396,6 +410,7 @@
 				TargetAttributes = {
 					A764ED251E5BD50E00C244C2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F985AYB25B;
 						ProvisioningStyle = Automatic;
 					};
 					A764ED3E1E5BD50E00C244C2 = {
@@ -517,8 +532,10 @@
 				A764ED7E1E5C18AA00C244C2 /* JYNoteBaseViewController.m in Sources */,
 				A764ED8A1E5C1A6500C244C2 /* JYNoteNetworkTool.m in Sources */,
 				A764ED9E1E5C260400C244C2 /* JYNoteLoginButton.m in Sources */,
+				A764EDBB1E5C405400C244C2 /* JYNoteAccountViewController.m in Sources */,
 				A764ED6F1E5BDEB800C244C2 /* JYNoteAppDelegate.m in Sources */,
 				A764ED2B1E5BD50E00C244C2 /* main.m in Sources */,
+				A764EDB81E5C3FF300C244C2 /* JYNoteTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +664,7 @@
 			baseConfigurationReference = F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F985AYB25B;
 				INFOPLIST_FILE = JYNote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -660,6 +678,7 @@
 			baseConfigurationReference = 4B2503302ADC52D2370DC4BD /* Pods-JYNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F985AYB25B;
 				INFOPLIST_FILE = JYNote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
