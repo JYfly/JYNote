@@ -6,6 +6,8 @@
 //  Copyright © 2017年 chen_sy. All rights reserved.
 //
 #import "JYNoteAppDelegate.h"
+#import "JYNoteNavigationController.h"
+#import "JYNoteBaseViewController.h"
 
 @interface JYNoteAppDelegate ()
 
@@ -15,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    JYNoteBaseViewController * baseVC = [[JYNoteBaseViewController alloc] init];
+    self.window.rootViewController = [[JYNoteNavigationController alloc] initWithRootViewController:baseVC];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

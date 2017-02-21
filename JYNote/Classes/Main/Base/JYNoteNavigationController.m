@@ -1,22 +1,23 @@
 //
-//  JYNoteBaseViewController.m
+//  JYNoteNavigationController.m
 //  JYNote
 //
 //  Created by chen_sy on 2017/2/21.
 //  Copyright © 2017年 chen_sy. All rights reserved.
 //
 
-#import "JYNoteBaseViewController.h"
+#import "JYNoteNavigationController.h"
 
-@interface JYNoteBaseViewController ()
+@interface JYNoteNavigationController ()
 
 @end
 
-@implementation JYNoteBaseViewController
+@implementation JYNoteNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationBar.barTintColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {

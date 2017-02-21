@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		6775D9312ABF89A444997CF9 /* libPods-JYNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435C2173936613F23AE10526 /* libPods-JYNote.a */; };
 		A764ED2B1E5BD50E00C244C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED2A1E5BD50E00C244C2 /* main.m */; };
-		A764ED341E5BD50E00C244C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A764ED321E5BD50E00C244C2 /* Main.storyboard */; };
-		A764ED391E5BD50E00C244C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A764ED371E5BD50E00C244C2 /* LaunchScreen.storyboard */; };
 		A764ED441E5BD50E00C244C2 /* JYNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED431E5BD50E00C244C2 /* JYNoteTests.m */; };
 		A764ED4F1E5BD50E00C244C2 /* JYNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED4E1E5BD50E00C244C2 /* JYNoteUITests.m */; };
 		A764ED611E5BDCC500C244C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764ED601E5BDCC500C244C2 /* Assets.xcassets */; };
-		A764ED6C1E5BDE5200C244C2 /* JYNoteBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED6B1E5BDE5200C244C2 /* JYNoteBaseViewController.m */; };
 		A764ED6F1E5BDEB800C244C2 /* JYNoteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED6E1E5BDEB800C244C2 /* JYNoteAppDelegate.m */; };
+		A764ED7E1E5C18AA00C244C2 /* JYNoteBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED7B1E5C18AA00C244C2 /* JYNoteBaseViewController.m */; };
+		A764ED7F1E5C18AA00C244C2 /* JYNoteNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED7D1E5C18AA00C244C2 /* JYNoteNavigationController.m */; };
+		A764ED831E5C195700C244C2 /* JYNoteConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED821E5C195700C244C2 /* JYNoteConst.m */; };
+		A764ED8A1E5C1A6500C244C2 /* JYNoteNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		4B2503302ADC52D2370DC4BD /* Pods-JYNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.release.xcconfig"; sourceTree = "<group>"; };
 		A764ED261E5BD50E00C244C2 /* JYNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A764ED2A1E5BD50E00C244C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A764ED331E5BD50E00C244C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A764ED381E5BD50E00C244C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A764ED3A1E5BD50E00C244C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A764ED3F1E5BD50E00C244C2 /* JYNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A764ED431E5BD50E00C244C2 /* JYNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNoteTests.m; sourceTree = "<group>"; };
@@ -50,10 +49,16 @@
 		A764ED4E1E5BD50E00C244C2 /* JYNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNoteUITests.m; sourceTree = "<group>"; };
 		A764ED501E5BD50E00C244C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A764ED601E5BDCC500C244C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A764ED6A1E5BDE5200C244C2 /* JYNoteBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteBaseViewController.h; sourceTree = "<group>"; };
-		A764ED6B1E5BDE5200C244C2 /* JYNoteBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteBaseViewController.m; sourceTree = "<group>"; };
 		A764ED6D1E5BDEB800C244C2 /* JYNoteAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteAppDelegate.h; sourceTree = "<group>"; };
 		A764ED6E1E5BDEB800C244C2 /* JYNoteAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteAppDelegate.m; sourceTree = "<group>"; };
+		A764ED7A1E5C18AA00C244C2 /* JYNoteBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteBaseViewController.h; sourceTree = "<group>"; };
+		A764ED7B1E5C18AA00C244C2 /* JYNoteBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteBaseViewController.m; sourceTree = "<group>"; };
+		A764ED7C1E5C18AA00C244C2 /* JYNoteNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteNavigationController.h; sourceTree = "<group>"; };
+		A764ED7D1E5C18AA00C244C2 /* JYNoteNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteNavigationController.m; sourceTree = "<group>"; };
+		A764ED811E5C195700C244C2 /* JYNoteConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteConst.h; sourceTree = "<group>"; };
+		A764ED821E5C195700C244C2 /* JYNoteConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteConst.m; sourceTree = "<group>"; };
+		A764ED881E5C1A6500C244C2 /* JYNoteNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteNetworkTool.h; sourceTree = "<group>"; };
+		A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteNetworkTool.m; sourceTree = "<group>"; };
 		F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +124,6 @@
 			children = (
 				A764ED621E5BDCD400C244C2 /* Classes */,
 				A764ED5F1E5BDCC500C244C2 /* Resourse */,
-				A764ED321E5BD50E00C244C2 /* Main.storyboard */,
-				A764ED371E5BD50E00C244C2 /* LaunchScreen.storyboard */,
 				A764ED291E5BD50E00C244C2 /* Supporting Files */,
 			);
 			path = JYNote;
@@ -164,26 +167,12 @@
 		A764ED621E5BDCD400C244C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A764ED841E5C196C00C244C2 /* Tools */,
+				A764ED801E5C18E900C244C2 /* Macro */,
 				A764ED651E5BDDEE00C244C2 /* Other */,
 				A764ED661E5BDDEE00C244C2 /* Main */,
-				A764ED641E5BDDE900C244C2 /* Tools */,
-				A764ED631E5BDD7B00C244C2 /* Macro */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		A764ED631E5BDD7B00C244C2 /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Macro;
-			sourceTree = "<group>";
-		};
-		A764ED641E5BDDE900C244C2 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		A764ED651E5BDDEE00C244C2 /* Other */ = {
@@ -198,10 +187,38 @@
 		A764ED661E5BDDEE00C244C2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A764ED6A1E5BDE5200C244C2 /* JYNoteBaseViewController.h */,
-				A764ED6B1E5BDE5200C244C2 /* JYNoteBaseViewController.m */,
+				A764ED791E5C18AA00C244C2 /* Base */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A764ED791E5C18AA00C244C2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED7A1E5C18AA00C244C2 /* JYNoteBaseViewController.h */,
+				A764ED7B1E5C18AA00C244C2 /* JYNoteBaseViewController.m */,
+				A764ED7C1E5C18AA00C244C2 /* JYNoteNavigationController.h */,
+				A764ED7D1E5C18AA00C244C2 /* JYNoteNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A764ED801E5C18E900C244C2 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED811E5C195700C244C2 /* JYNoteConst.h */,
+				A764ED821E5C195700C244C2 /* JYNoteConst.m */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		A764ED841E5C196C00C244C2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A764ED881E5C1A6500C244C2 /* JYNoteNetworkTool.h */,
+				A764ED891E5C1A6500C244C2 /* JYNoteNetworkTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		D95461CC4DE21E882D1C47EA /* Frameworks */ = {
@@ -321,9 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A764ED391E5BD50E00C244C2 /* LaunchScreen.storyboard in Resources */,
 				A764ED611E5BDCC500C244C2 /* Assets.xcassets in Resources */,
-				A764ED341E5BD50E00C244C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A764ED831E5C195700C244C2 /* JYNoteConst.m in Sources */,
+				A764ED7F1E5C18AA00C244C2 /* JYNoteNavigationController.m in Sources */,
+				A764ED7E1E5C18AA00C244C2 /* JYNoteBaseViewController.m in Sources */,
+				A764ED8A1E5C1A6500C244C2 /* JYNoteNetworkTool.m in Sources */,
 				A764ED6F1E5BDEB800C244C2 /* JYNoteAppDelegate.m in Sources */,
-				A764ED6C1E5BDE5200C244C2 /* JYNoteBaseViewController.m in Sources */,
 				A764ED2B1E5BD50E00C244C2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,25 +450,6 @@
 			targetProxy = A764ED4B1E5BD50E00C244C2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A764ED321E5BD50E00C244C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A764ED331E5BD50E00C244C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A764ED371E5BD50E00C244C2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A764ED381E5BD50E00C244C2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A764ED511E5BD50E00C244C2 /* Debug */ = {
@@ -547,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JYNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chen-sy.JYNote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JYNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chen-sy.JYNote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
