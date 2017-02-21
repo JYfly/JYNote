@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6775D9312ABF89A444997CF9 /* libPods-JYNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435C2173936613F23AE10526 /* libPods-JYNote.a */; };
 		A764ED2B1E5BD50E00C244C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A764ED2A1E5BD50E00C244C2 /* main.m */; };
 		A764ED341E5BD50E00C244C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A764ED321E5BD50E00C244C2 /* Main.storyboard */; };
 		A764ED391E5BD50E00C244C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A764ED371E5BD50E00C244C2 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		435C2173936613F23AE10526 /* libPods-JYNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JYNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2503302ADC52D2370DC4BD /* Pods-JYNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.release.xcconfig"; sourceTree = "<group>"; };
 		A764ED261E5BD50E00C244C2 /* JYNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A764ED2A1E5BD50E00C244C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A764ED331E5BD50E00C244C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		A764ED6B1E5BDE5200C244C2 /* JYNoteBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteBaseViewController.m; sourceTree = "<group>"; };
 		A764ED6D1E5BDEB800C244C2 /* JYNoteAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNoteAppDelegate.h; sourceTree = "<group>"; };
 		A764ED6E1E5BDEB800C244C2 /* JYNoteAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNoteAppDelegate.m; sourceTree = "<group>"; };
+		F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYNote/Pods-JYNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6775D9312ABF89A444997CF9 /* libPods-JYNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB07AE8ABD1789F6614E11D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */,
+				4B2503302ADC52D2370DC4BD /* Pods-JYNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A764ED1D1E5BD50D00C244C2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				A764ED421E5BD50E00C244C2 /* JYNoteTests */,
 				A764ED4D1E5BD50E00C244C2 /* JYNoteUITests */,
 				A764ED271E5BD50E00C244C2 /* Products */,
+				0FB07AE8ABD1789F6614E11D /* Pods */,
+				D95461CC4DE21E882D1C47EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +204,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D95461CC4DE21E882D1C47EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				435C2173936613F23AE10526 /* libPods-JYNote.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A764ED531E5BD50E00C244C2 /* Build configuration list for PBXNativeTarget "JYNote" */;
 			buildPhases = (
+				F58C8BF15BFBD7A40861214A /* [CP] Check Pods Manifest.lock */,
 				A764ED221E5BD50E00C244C2 /* Sources */,
 				A764ED231E5BD50E00C244C2 /* Frameworks */,
 				A764ED241E5BD50E00C244C2 /* Resources */,
+				DEA8F31CBCAA66DC2D33DB3D /* [CP] Embed Pods Frameworks */,
+				E696A691F6CDF74B03505B3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +342,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEA8F31CBCAA66DC2D33DB3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYNote/Pods-JYNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E696A691F6CDF74B03505B3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYNote/Pods-JYNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F58C8BF15BFBD7A40861214A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A764ED221E5BD50E00C244C2 /* Sources */ = {
@@ -468,6 +543,7 @@
 		};
 		A764ED541E5BD50E00C244C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62F16CF65D5E388DEBC575B /* Pods-JYNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JYNote/Info.plist;
@@ -479,6 +555,7 @@
 		};
 		A764ED551E5BD50E00C244C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2503302ADC52D2370DC4BD /* Pods-JYNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JYNote/Info.plist;
