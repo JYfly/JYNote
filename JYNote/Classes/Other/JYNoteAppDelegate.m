@@ -9,8 +9,12 @@
 #import "JYNoteNavigationController.h"
 #import "JYNoteTabBarViewController.h"
 #import "JYNoteHomeViewController.h"
+#import "JYNoteAccountViewController.h"
+#import "JYNoteBaseViewController.h"
 
 @interface JYNoteAppDelegate ()
+
+@property (nonatomic, strong) JYNoteNavigationController *rootNavigationViewController;
 
 @end
 
@@ -20,16 +24,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    JYNoteTabBarViewController * baseVC = [[JYNoteTabBarViewController alloc] init];
-    self.window.rootViewController = [[JYNoteNavigationController alloc] initWithRootViewController:baseVC];
-    
-    self.window.rootViewController = [[JYNoteNavigationController alloc] initWithRootViewController:baseVC setNavigationBarHidden:NO];
+
+    self.window.rootViewController = [self rootNavigationViewController];
     
     [self.window makeKeyAndVisible];
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -55,6 +56,39 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - init Tab bar
+/**
+ *  此函数在整个app生命周期只能调用一次，构件一次
+ */
+- (JYNoteNavigationController *)rootNavigationViewController {
+    if (_rootNavigationViewController) {
+        return _rootNavigationViewController;
+    }
+    
+    NSMutableArray *localViewControllersArray = [[NSMutableArray alloc] initWithCapacity:2];
+    
+    JYNoteHomeViewController *homeVC = [[JYNoteHomeViewController alloc] init];
+    [self createTabBarItemForViewControllers:homeVC title:@"笔记"];
+    [localViewControllersArray addObject:homeVC];
+    
+    JYNoteAccountViewController *accoutVC = [[JYNoteAccountViewController alloc] init];
+    [self createTabBarItemForViewControllers:accoutVC title:@"账户"];
+    [localViewControllersArray addObject:accoutVC];
+    
+    JYNoteTabBarViewController *tabVC = [[JYNoteTabBarViewController alloc] init];
+    tabVC.viewControllers = localViewControllersArray;
+    
+    _rootNavigationViewController = [[JYNoteNavigationController alloc] initWithRootViewController:tabVC setNavigationBarHidden:NO];
+    
+    return _rootNavigationViewController;
+}
+
+- (JYNoteBaseViewController *)createTabBarItemForViewControllers:(JYNoteBaseViewController *)controller title:(NSString *)title {
+    controller.tabBarItem.title = title;
+    
+    return controller;
 }
 
 

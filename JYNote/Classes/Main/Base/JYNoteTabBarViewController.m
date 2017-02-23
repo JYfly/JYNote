@@ -19,20 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self initTabViewController];
 }
 
-- (void) initTabViewController {
-    
-    JYNoteHomeViewController *homeVC = [[JYNoteHomeViewController alloc] init];
-    UITabBarItem *item0=[[UITabBarItem alloc]initWithTitle:@"笔记" image:nil tag:0];
-    homeVC.tabBarItem = item0;
-    
-    JYNoteAccountViewController *accoutVC = [[JYNoteAccountViewController alloc] init];
-    UITabBarItem *item1=[[UITabBarItem alloc]initWithTitle:@"账户" image:nil tag:1];
-    accoutVC.tabBarItem = item1;
-    self.viewControllers = [NSArray arrayWithObjects:homeVC, accoutVC, nil];
-}
 
 @end

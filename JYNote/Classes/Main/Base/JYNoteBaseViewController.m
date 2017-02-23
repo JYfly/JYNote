@@ -19,9 +19,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    
 }
 
 - (void)setNavigationBarTintColor:(UIColor *)color {
@@ -31,6 +30,7 @@
 - (void)setNavigationBarHidden:(BOOL)hidden {
     [self.navigationController.navigationBar setHidden:hidden];
 }
+
 
 /*
 #pragma mark - Navigation

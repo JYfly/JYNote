@@ -21,11 +21,17 @@
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 40)];
     button.backgroundColor = [UIColor redColor];
     
+    self.navigationItem.title = @"账户";
+    
     [button addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
    
-//    JYNoteLoginViewController *loginVC = [[JYNoteLoginViewController alloc] init];
-//    [self presentViewController:loginVC animated:YES completion:nil];
+    JYNoteLoginViewController *loginVC = [[JYNoteLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.navigationItem.title = @"Account";
 }
 
 - (void)clickBtn {

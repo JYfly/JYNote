@@ -73,7 +73,6 @@
     login.translateBlock = ^{
         button.bounds = CGRectMake(0, 0, 44, 44);
         button.layer.cornerRadius = 22;
-        
         //点击响应
         [self dismissViewControllerAnimated:YES completion:nil];
     };

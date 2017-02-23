@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kTabNote @"笔记"
+#define kTabAccont @"账户"
+
 @interface JYNoteTabBarViewController : UITabBarController
 
 @end
