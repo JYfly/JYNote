@@ -7,6 +7,7 @@
 //
 
 #import "JYNoteHomeViewController.h"
+#import "JYNoteSoundTool.h"
 
 @interface JYNoteHomeViewController ()
 
@@ -16,15 +17,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testView];
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.navigationItem.title = @"home";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//测试方法
+- (void)testView {
+    UIButton *startRecord = [[UIButton alloc] initWithFrame:CGRectMake(150, 100, 80, 50)];
+    [startRecord setTitle:@"开始录制" forState:UIControlStateNormal];
+    startRecord.backgroundColor = [UIColor blackColor];
+    [startRecord addTarget:self action:@selector(startRecord) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *endRecord = [[UIButton alloc] initWithFrame:CGRectMake(150, 200, 80, 50)];
+    [endRecord setTitle:@"结束录制" forState:UIControlStateNormal];
+    endRecord.backgroundColor = [UIColor blackColor];
+    [endRecord addTarget:self action:@selector(endRecord) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *startPlaying = [[UIButton alloc] initWithFrame:CGRectMake(150, 300, 80, 50)];
+    [startPlaying setTitle:@"开始播放" forState:UIControlStateNormal];
+    startPlaying.backgroundColor = [UIColor blackColor];
+    [startPlaying addTarget:self action:@selector(startPlaying) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *endPlaying = [[UIButton alloc] initWithFrame:CGRectMake(150, 400, 80, 50)];
+    [endPlaying setTitle:@"结束播放" forState:UIControlStateNormal];
+    endPlaying.backgroundColor = [UIColor blackColor];
+    [endPlaying addTarget:self action:@selector(endPlaying) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:startRecord];
+    [self.view addSubview:endRecord];
+    [self.view addSubview:startPlaying];
+    [self.view addSubview:endPlaying];
+}
+
+- (void)startRecord {
+    [[JYNoteSoundTool shareManager] startRecording];
+}
+
+- (void)endRecord {
+    [[JYNoteSoundTool shareManager] stopRecording];
+}
+
+- (void)startPlaying {
+    [[JYNoteSoundTool shareManager] playSound];
+}
+
+- (void)endPlaying {
+    [[JYNoteSoundTool shareManager] stopPlaySound];
 }
 
 /*

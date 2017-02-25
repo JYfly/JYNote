@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JYNoteConst : NSObject
-
-@end
+//录音保存文件路径
+#define kRecordAudioFile @"JYNoteSoundRecord.caf"
