@@ -8,5 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+//尺寸相关
+#define kScreenWidth  ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
 //录音保存文件路径
 #define kRecordAudioFile @"JYNoteSoundRecord.caf"

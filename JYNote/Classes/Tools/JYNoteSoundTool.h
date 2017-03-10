@@ -9,12 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+@protocol JYNoteSoundToolDelegate <NSObject>
+
+- (void)updateProgress:(CGFloat)progress;
+
+@end
+
 @interface JYNoteSoundTool : NSObject <AVAudioRecorderDelegate>
+
+@property (nonatomic, weak) id <JYNoteSoundToolDelegate> delegate;
 
 //必须传入
 @property (nonatomic, strong) NSString *filePath;
 
-+ (instancetype)shareManager;
 //录音对象
 @property (nonatomic, strong) AVAudioRecorder *recorder;
 //播放器对象

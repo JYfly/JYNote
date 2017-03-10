@@ -16,18 +16,12 @@
 
 @property (nonatomic, strong) AVAudioSession *session;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation JYNoteSoundTool
 
-+ (instancetype)shareManager {
-    static JYNoteSoundTool *soundTool;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        soundTool = [[self alloc] init];
-    });
-    return soundTool;
-}
 
 - (void)setFilePath:(NSString *)filePath {
     _filePath = filePath;
@@ -38,9 +32,26 @@
 - (NSURL *)getSoundUrl {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *filePath = [path stringByAppendingPathComponent:kRecordAudioFile];
-    //self.recordFileUrl = [NSURL fileURLWithPath:filePath];
     NSLog(@"%@", filePath);
     return [NSURL URLWithString:filePath];
+}
+
+- (NSTimer *)timer {
+    if (!_timer) {
+        _timer = [NSTimer timerWithTimeInterval:0.1f target:self selector:@selector(testSoundIntensity) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    return _timer;
+}
+
+- (void)testSoundIntensity {
+    [self.recorder updateMeters];//更新测量值
+    float power= [self.recorder averagePowerForChannel:0];//取得第一个通道的音频，注意音频强度范围时-160到0
+    CGFloat progress=(1.0/160.0)*(power+160.0);
+    
+    NSLog(@"progress = %f",progress);
+    
+    [self.delegate updateProgress:progress];
 }
 
 #pragma mark - recoder
@@ -59,23 +70,28 @@
         [settingDic setObject:@(8) forKey:AVLinearPCMBitDepthKey];
         // 录音质量
         [settingDic setObject:[NSNumber numberWithInt:AVAudioQualityMedium] forKey:AVEncoderAudioQualityKey];
+        //创建录音机
+        NSError *error = nil;
+        _recorder = [[AVAudioRecorder alloc] initWithURL:[self getSoundUrl] settings:settingDic error:&error];
+        _recorder.delegate = self;
+        //如果要监控声波则必须设置为YES
+        _recorder.meteringEnabled = YES;
         
+        [_recorder prepareToRecord];
+        
+        NSLog(@"%@",[_recorder prepareToRecord]?@"yes":@"no");
+        
+        if (error) {
+            NSLog(@"创建录音机对象失败error info = %@",error.localizedDescription);
+            return nil;
+        }
     }
-    //每次需要重新获取路径
-    //创建录音机
-    _recorder = [[AVAudioRecorder alloc] initWithURL:[self getSoundUrl] settings:settingDic error:NULL];
-    _recorder.delegate = self;
-    //如果要监控声波则必须设置为YES
-    _recorder.meteringEnabled = YES;
-    
-    [_recorder prepareToRecord];
-    
     return _recorder;
 }
 
 - (void)startRecording {
     if (![self.recorder isRecording]) {
-        // 真机环境下需要的代码
+        //设置为播放和录音状态，以便可以在录制完之后播放录音
         AVAudioSession *session = [AVAudioSession sharedInstance];
         NSError *sessionError;
         [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
@@ -90,12 +106,17 @@
         self.session = session;
         
         [self.recorder record];
+        
+        [self.timer fire];
     }
 }
 
 - (void)stopRecording {
     if ([self.recorder isRecording]) {
         [self.recorder stop];
+        [self.timer invalidate];
+        
+        [self.delegate updateProgress:0.0];
     }
 }
 
